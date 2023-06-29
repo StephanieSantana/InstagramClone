@@ -15,13 +15,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjf-Hy-gvm">
+                                <rect key="frame" x="10" y="131" width="373" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="XOy-as-kiA">
+                                <rect key="frame" x="10" y="272" width="373" height="187"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBH-E3-6Vt">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApL-pg-tJT">
+                                        <rect key="frame" x="0.0" y="31.333333333333314" width="363" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me9-Vs-u2E">
+                                        <rect key="frame" x="0.0" y="76.333333333333314" width="41.333333333333336" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbR-Z6-erB">
+                                        <rect key="frame" x="0.0" y="107.66666666666669" width="363" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVE-gg-agq">
+                                        <rect key="frame" x="0.0" y="152.66666666666669" width="363" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DbR-Z6-erB" secondAttribute="trailing" constant="10" id="Aff-1X-sOD"/>
+                                    <constraint firstAttribute="trailing" secondItem="YVE-gg-agq" secondAttribute="trailing" constant="10" id="KUA-0l-35J"/>
+                                    <constraint firstAttribute="trailing" secondItem="ApL-pg-tJT" secondAttribute="trailing" constant="10" id="UNt-oA-CN8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tjf-Hy-gvm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="37T-J8-WxD"/>
+                            <constraint firstItem="XOy-as-kiA" firstAttribute="top" secondItem="Tjf-Hy-gvm" secondAttribute="bottom" constant="120.67" id="3dj-05-VCR"/>
+                            <constraint firstItem="XOy-as-kiA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ogq-M2-8HJ"/>
+                            <constraint firstItem="Tjf-Hy-gvm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="asy-kE-qRT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tjf-Hy-gvm" secondAttribute="trailing" constant="10" id="vAd-rp-MZV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XOy-as-kiA" secondAttribute="trailing" constant="10" id="vMh-3n-MVt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="YVE-gg-agq" id="3ab-9y-Eag"/>
+                        <outlet property="passwordLabel" destination="me9-Vs-u2E" id="FqI-mY-aa1"/>
+                        <outlet property="passwordTextfield" destination="DbR-Z6-erB" id="ngi-IR-uVs"/>
+                        <outlet property="titleLabel" destination="Tjf-Hy-gvm" id="v0k-A2-mqw"/>
+                        <outlet property="usernameLabel" destination="RBH-E3-6Vt" id="L3s-nA-MOH"/>
+                        <outlet property="usernameTextfield" destination="ApL-pg-tJT" id="2yk-he-d3O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-27"/>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
